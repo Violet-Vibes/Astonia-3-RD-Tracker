@@ -22,15 +22,15 @@ C:\Users\smoor\Desktop\RDTracker\RDTracker\obj\Release\RDTracker.frmMain.resourc
 C:\Users\smoor\Desktop\RDTracker\RDTracker\obj\Release\RDTracker.frmSettings.resources
 C:\Users\smoor\Desktop\RDTracker\RDTracker\obj\Release\RDTracker.Resources.resources
 C:\Users\smoor\Desktop\RDTracker\RDTracker\obj\Release\RDTracker.vbproj.GenerateResource.Cache
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.exe
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.xml
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.pdb
-G:\Spel\Astonia 3\RDTracker\RDTracker\bin\Release\RDTracker.exe.config
-G:\Spel\Astonia 3\RDTracker\RDTracker\bin\Release\RDTracker.exe
-G:\Spel\Astonia 3\RDTracker\RDTracker\bin\Release\RDTracker.pdb
-G:\Spel\Astonia 3\RDTracker\RDTracker\bin\Release\RDTracker.xml
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.frmMain.resources
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.frmSettings.resources
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.Resources.resources
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.vbproj.GenerateResource.cache
-G:\Spel\Astonia 3\RDTracker\RDTracker\obj\Release\RDTracker.vbproj.CoreCompileInputs.cache
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\bin\Release\RDTracker.exe.config
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.exe
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.xml
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.pdb
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\bin\Release\RDTracker.exe
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\bin\Release\RDTracker.pdb
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\bin\Release\RDTracker.xml
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.vbprojResolveAssemblyReference.cache
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.frmMain.resources
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.frmSettings.resources
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.Resources.resources
+C:\Users\smoor\Desktop\Astonia\RDTracker\RDTracker\obj\Release\RDTracker.vbproj.GenerateResource.Cache

@@ -31,6 +31,7 @@ Partial Class frmSettings
         Me.chkMulti = New System.Windows.Forms.CheckBox()
         Me.chkCata = New System.Windows.Forms.CheckBox()
         Me.ttpInfo = New System.Windows.Forms.ToolTip(Me.components)
+        Me.chkUgaris = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'btnOK
@@ -73,7 +74,7 @@ Partial Class frmSettings
         'chkTopmost
         '
         Me.chkTopmost.AutoSize = True
-        Me.chkTopmost.Location = New System.Drawing.Point(9, 31)
+        Me.chkTopmost.Location = New System.Drawing.Point(9, 77)
         Me.chkTopmost.Name = "chkTopmost"
         Me.chkTopmost.Size = New System.Drawing.Size(96, 17)
         Me.chkTopmost.TabIndex = 4
@@ -103,6 +104,18 @@ Partial Class frmSettings
         Me.ttpInfo.SetToolTip(Me.chkCata, "Enable CATA Mode")
         Me.chkCata.UseVisualStyleBackColor = True
         '
+        'chkUgaris
+        '
+        Me.chkUgaris.AutoSize = True
+        Me.chkUgaris.Location = New System.Drawing.Point(9, 31)
+        Me.chkUgaris.Name = "chkUgaris"
+        Me.chkUgaris.Size = New System.Drawing.Size(56, 17)
+        Me.chkUgaris.TabIndex = 9
+        Me.chkUgaris.Text = "Ugaris"
+        Me.ttpInfo.SetToolTip(Me.chkUgaris, "Ugaris" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "RDTracker needs to be run as administrator" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "or you will get ""OpenProcess(" &
+        ") FAIL!' error")
+        Me.chkUgaris.UseVisualStyleBackColor = True
+        '
         'frmSettings
         '
         Me.AcceptButton = Me.btnOK
@@ -113,6 +126,7 @@ Partial Class frmSettings
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(186, 168)
         Me.ControlBox = False
+        Me.Controls.Add(Me.chkUgaris)
         Me.Controls.Add(Me.chkCata)
         Me.Controls.Add(Me.txtKey)
         Me.Controls.Add(Me.chkMulti)
@@ -142,4 +156,5 @@ Partial Class frmSettings
     Friend WithEvents chkMulti As CheckBox
     Friend WithEvents chkCata As CheckBox
     Friend WithEvents ttpInfo As ToolTip
+    Friend WithEvents chkUgaris As CheckBox
 End Class

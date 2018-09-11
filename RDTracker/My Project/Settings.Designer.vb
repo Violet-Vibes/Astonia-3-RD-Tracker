@@ -56,10 +56,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("4625240")>  _
-        Public Property Mem() As Long
+         Global.System.Configuration.DefaultSettingValueAttribute("4607008")>  _
+        Public Property Mem() As Integer
             Get
-                Return CType(Me("Mem"),Long)
+                Return CType(Me("Mem"),Integer)
             End Get
             Set
                 Me("Mem") = value

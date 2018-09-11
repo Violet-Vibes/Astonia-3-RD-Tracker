@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
   <Profiles />
   <Settings>
-    <Setting Name="Mem" Type="System.Int64" Scope="User">
-      <Value Profile="(Default)">4625240</Value>
+    <Setting Name="Mem" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">4607008</Value>
     </Setting>
     <Setting Name="Topmost" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>

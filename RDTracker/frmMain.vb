@@ -1,7 +1,13 @@
 ﻿Imports System.ComponentModel
 Imports System.Runtime.InteropServices
+Imports System.Threading
 Public Class frmMain
     Private strWndClass As String = "MAINWNDMOAC"
+
+    ' 1.5.3
+    ' improved multi performance
+    ' increased scanning interval from 100ms to 50ms
+    ' messed up code a bit
 
     ' 1.5.2
     ' improved performance
@@ -81,6 +87,8 @@ Public Class frmMain
 
         Me.Text = If(My.Settings.Cata, "CATA", "RD") & " Tracker"
 
+        CheckForIllegalCrossThreadCalls = False
+
     End Sub
     Private Sub cboAlt_DropDown(sender As Object, e As EventArgs) Handles cboAlt.DropDown
         Dim lstAst As New List(Of String)
@@ -152,7 +160,22 @@ Public Class frmMain
         Return New Point(gameX, gameY)
 
     End Function
+
+    Private Function getAstoniaProcesses()
+        Dim lst As List(Of Process) = New List(Of Process)
+        For Each pp As Process In Process.GetProcesses
+            If pp.MainWindowTitle.Contains("Astonia") AndAlso
+                Not pp.MainWindowTitle.StartsWith("Someone") AndAlso
+                GetWindowClass(pp.MainWindowHandle) = strWndClass Then
+                lst.Add(pp)
+            End If
+        Next
+        Return lst
+    End Function
+
     Dim mainRdNum As Integer = 0
+    Dim loopCount As Integer = 0
+    Dim lstAproc As List(Of Process) = getAstoniaProcesses()
     Private Sub tmrTick_Tick(sender As Object, e As EventArgs) Handles tmrTick.Tick
 
         If cboAlt.SelectedIndex = 0 Then
@@ -213,18 +236,28 @@ Public Class frmMain
         If prevP <> ptZero AndAlso prevP <> newP Then
             Maze.plotMaze(prevP.X, prevP.Y)
         End If
-        prevP = New Point(gameX, gameY)
+        prevP = newP
 
         Maze.update()
 
         If My.Settings.Multi Then
+            If loopCount > (1500 \ tmrTick.Interval) Then
+                ' only update list evey 1.5 seconds
+                lstAproc = getAstoniaProcesses()
+                loopCount = 0
+            Else
+                loopCount += 1
+            End If
+
             Dim altP As Point
             Dim altNum As Integer
-            For Each pp As Process In Process.GetProcesses
+            For Each pp As Process In lstAproc
+                If pp.HasExited Then
+                    Continue For
+                End If
                 If pp.MainWindowTitle IsNot Nothing AndAlso
                    pp.Id <> _memManager.targetProcess.Id AndAlso
                    Not pp.MainWindowTitle.StartsWith("Someone") AndAlso
-                   GetWindowClass(pp.MainWindowHandle) = strWndClass AndAlso
                    pp.MainWindowTitle.Contains(strSock) Then
                     altP = readMemPoint(pp)
                     altNum = Maze.getNum(altP.X, altP.Y)
@@ -270,4 +303,5 @@ Public Class frmMain
             My.Settings.Location = Me.Location
         End If
     End Sub
+
 End Class

@@ -62,6 +62,7 @@ Partial Class frmMain
         '
         'tmrTick
         '
+        Me.tmrTick.Interval = 50
         '
         'btnSettings
         '

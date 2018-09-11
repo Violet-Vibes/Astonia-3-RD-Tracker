@@ -8,7 +8,7 @@ Public Class frmSettings
         chkTopmost.Checked = My.Settings.Topmost
         chkMulti.Checked = My.Settings.Multi
         chkCata.Checked = My.Settings.Cata
-
+        chkUgaris.Checked = My.Settings.Ugaris
 
     End Sub
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
@@ -29,7 +29,7 @@ Public Class frmSettings
         My.Settings.Topmost = chkTopmost.Checked
         frmMain.TopMost = chkTopmost.Checked
 
-
+        My.Settings.Ugaris = chkUgaris.Checked
 
         If Not chkCata.Checked = My.Settings.Cata Then
             frmMain.tmrTick.Enabled = False
@@ -49,15 +49,5 @@ Public Class frmSettings
         End If
     End Sub
 
-    Private Sub chkUgaris_CheckedChanged(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub chkMulti_CheckedChanged(sender As Object, e As EventArgs) Handles chkMulti.CheckedChanged
-
-    End Sub
-
-    Private Sub chkCata_CheckedChanged(sender As Object, e As EventArgs) Handles chkCata.CheckedChanged
-
-    End Sub
 End Class
