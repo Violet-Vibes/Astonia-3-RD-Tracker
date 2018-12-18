@@ -6,11 +6,17 @@ Originally from http://users.telenet.be/smoorke/astonia/RDTracker/
 Works for any astonia version.
 
 Ugaris: 2241092, make sure to select ugaris in the options.
+
 Old World: 4597484
+
 Astonia Reborn: 4607008
+
 Reborn 3.5/Astonia Realm/Old Astonia Reborn: 4681352
+
 A3res: 4625240
+
 Astonia.EU (Only decent server worth playing imo): 4659756
+
 
 Oh also, fuck Tegra.
 
